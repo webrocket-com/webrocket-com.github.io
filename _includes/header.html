@@ -1,0 +1,106 @@
+<header class="header">
+
+	<div class="wrap">
+
+		{% if site.data.settings.header_settings.logo_image %}
+		<a href="{{ site.baseurl }}/" class="header__logo">
+			<img src="{{ site.data.settings.header_settings.logo_image | relative_url }}" class="header__logo__img">
+		</a>
+		{% else %}
+		<a href="{{ site.baseurl }}/" class="header__title">
+			{{ site.data.settings.basic_settings.site_title }}
+		</a>
+		{% endif %}
+
+		<div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					{% for item in site.data.settings.menu_settings.menu_items %}
+						{% if item.subpages %}
+							<li class="menu__list__item dropdown-wrap">
+								<a href="#" class="menu__list__item__link dropdown-toggle">
+									<span>{{ item.title }}</span>
+									<div>
+										<i class="fas fa-angle-right dropdown-close"></i>
+										<i class="fas fa-angle-down dropdown-open"></i>
+									</div>
+								</a>
+								<ul class="dropdown-menu">
+									{% for page in item.subpages %}
+										<li class="dropdown-item">
+											<a href="{{ page.url | relative_url }}" class="menu__list__item__link dropdown-link"><i class="fas fa-arrow-right" style="width: 0.6em; margin-right: 0.2em;"></i> {{ page.title }}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</li>
+						{% else %}
+							<li class="menu__list__item">
+								<a href="{{ item.url | relative_url }}" class="menu__list__item__link">{{ item.title }}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+			<script>
+				// dropdown pages hardcoded because
+				// site.data.settings.menu_settings.menu_items is no json
+				const dropdownPages = ['expertise', 'tracking', 'webanalyse'];
+
+				const currentPage = '{{ page.url }}'.substring(1);
+				const menuLinks = document.querySelectorAll('.menu__list__item__link');
+				const dropdownToggle = document.querySelector('.dropdown-toggle');
+				const dropdownWrap = document.querySelector('.dropdown-wrap');
+				const dropdownMenu = document.querySelector('.dropdown-menu');
+
+				const isDropdownPage = (page) => dropdownPages.includes(page);
+
+				const toggleDropdown = () => {
+					if (isDropdownPage(currentPage) && window.innerWidth < 1024) {
+						if (
+							!dropdownWrap.classList.contains('open') &&
+							!dropdownMenu.classList.contains('active')
+						) {
+							dropdownWrap.classList.add('open');
+							dropdownMenu.classList.add('active');
+						} else {
+							dropdownWrap.classList.remove('open');
+							dropdownMenu.classList.remove('active');
+						}
+					}
+				};
+				
+				const toggleActive = (page) => {
+					if (isDropdownPage(page)) {
+						dropdownToggle.classList.add('dropdown-active');
+						if (page === currentPage) toggleDropdown();
+					} else {
+						dropdownToggle.classList.remove('dropdown-active');
+					}
+				};
+
+				menuLinks.forEach(menuLink => {
+					menuLink.addEventListener('click', (e) => {
+						const page = e.target.getAttribute('href');
+						if (page !== null) toggleActive(page.split('/')[1]);
+					});
+				});
+
+				dropdownToggle.addEventListener('click', toggleDropdown);
+
+				window.addEventListener('resize', () => {
+					if (window.innerWidth > 1024) {
+						dropdownWrap.classList.remove('open');
+						dropdownMenu.classList.remove('active');
+					}
+				});
+
+				toggleActive(currentPage);
+			</script>
+		</div>
+
+	</div>
+
+</header>

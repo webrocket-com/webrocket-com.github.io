@@ -1,0 +1,72 @@
+
+
+@mixin white-gradient {
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 20s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-220px * 4))}
+}
+
+// Styling
+.slider-referenzen {
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 90%;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(220px * 8);
+	}
+	
+	.slide {
+		// height: 100px;
+		// width: 250px;
+		display: flex;
+		align-items: center;
+		margin-left: 1em;
+		margin-right: 1em;
+		max-width: 220px;
+	}
+
+	.slide.no-margin {
+		margin-left: -20px;
+		margin-right: -15px;
+	}
+
+	.slide:first-child {
+		margin-left: 100px;
+	}
+
+	.slide:last-child {
+		margin-right: 100px;
+	}
+}

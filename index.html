@@ -1,0 +1,121 @@
+---
+layout: default
+title: Ihre Webanalyse Spezial Agentur aus Wien!.
+description: A sleek, modern Jekyll theme for personal websites. Personal is the perfect theme for developers, designers and other creatives.
+featured_image: images\demo\home3.jpg
+---
+
+<section class="hero">
+
+	<div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>ADVANCED DATA ANALYSIS</h1>
+		<p>Der Raketenstart in neue Datengalaxien für dein Unternehmen</p>
+		<br>
+		<a href="/contact" class="button buttons--circular">Kontaktiere uns</a>
+
+	</div>
+
+</section>
+
+<section class="listing">
+
+	<div class="wrap">
+
+		<!--Expertise Karte-->
+		{% assign expertise = site.pages | where: "subtitle", "Expertise" | first %}
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url({{ expertise.featured_image | relative_url }})"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="{{expertise.url | relative_url }}">{{ expertise.title }}</a></h2>
+					<p class="post__subtitle">{{ expertise.subtitle }}</p>
+					<p class="post__description">{{ expertise.description }}</p>
+				</div>
+			</div>
+
+		</article>
+
+		<!--Referenz Karte-->
+		{% assign reference = site.pages | where: "subtitle", "Referenzen" | first %}
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url({{ reference.featured_image | relative_url }})"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="{{reference.url | relative_url }}">{{ reference.title }}</a></h2>
+					<p class="post__subtitle">{{ reference.subtitle }}</p>
+					<p class="post__description">{{ reference.description }}</p>
+				</div>
+			</div>
+
+		</article>
+
+		<!--Webrocket Crew Karte-->
+		{% assign cardpage = site.pages | where: "title", "Die Webrocket Crew" | first %}
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url({{ cardpage.featured_image | relative_url }})"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="{{cardpage.url | relative_url }}">{{ cardpage.title }}</a></h2>
+					<p class="post__subtitle">{{cardpage.subtitle }}</p>
+					<p class="post__description">{{ cardpage.description }}</p>
+				</div>
+			</div>
+
+		</article>
+
+		<!--Webrocket Crew Karte-->
+		{% assign cardpage = site.pages | where: "subtitle", "Jobs" | first %}
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url({{ cardpage.featured_image | relative_url }})"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="{{cardpage.url | relative_url }}">{{ cardpage.title }}</a></h2>
+					<p class="post__subtitle">{{cardpage.subtitle }}</p>
+					<p class="post__description">{{ cardpage.description }}</p>
+				</div>
+			</div>
+
+		</article>
+
+
+
+
+
+	</div>
+
+</section>
+
+
+<section class="content">
+
+	<div class="wrap" style="margin-top: 4em;">
+
+		<article class="single-post" style="text-align: center;  background-color: #efefef; box-shadow: none;">
+			<h3><b>Du willst mehr erfahren? Dann kontaktiere uns!</b></h3>
+			<p><a href="/contact" class="button button--large">Beratungstermin vereinbaren</a></p>
+		</article>
+
+	</div>
+
+</section>

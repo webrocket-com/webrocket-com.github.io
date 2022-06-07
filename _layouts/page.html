@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<section class="hero hero--single">
+
+	<div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>{{ page.title }}</h1>
+		<p>{{ page.subtitle }}</p>
+
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		<article class="single-post">
+
+			{{ page.content }}
+
+		</article>
+
+	</div>
+
+		{% if page.subtitle == "Expertise" or page.subtitle == "Referenzen" %}
+		<div class="wrap" style="margin-top: 6em;">
+
+			<article class="single-post" style="text-align: center;">
+				<h3><b>Du willst mehr erfahren? Dann kontaktiere uns!</b></h3>
+				<p><a href="/contact" class="button button--large">Beratungstermin vereinbaren</a></p>
+			</article>
+
+		</div>
+		{% elsif page.subtitle != "Kontakt" %}
+		<div class="wrap" style="margin-top: 6em;">
+
+			<article class="single-post" style="text-align: center;">
+				<h3><b>Du willst Teil des Teams werden?</b></h3>
+				<p><a href="/contact" class="button button--large">Dann bewirb dich jetzt!</a></p>
+			</article>
+
+		</div>
+		{% endif %}
+
+
+</section>
