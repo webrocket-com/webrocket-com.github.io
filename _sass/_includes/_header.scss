@@ -67,7 +67,11 @@
 		right: 20px;
 		@include translate(0,-50%);
 	}
+
+	/*custom*/
+	z-index: 9999;
 }
+
 
 .menu__toggle {
 	position: absolute;

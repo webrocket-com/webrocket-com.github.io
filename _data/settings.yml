@@ -8,16 +8,16 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: Expertise
-      url: /expertise
+    - title: 'Expertise'
+      url: '/expertise'
       subpages:
-        - title: Übersicht
-          url: /expertise
-        - title: Tracking
-          url: /tracking
-        - title: Webanalyse
-          url: /webanalyse
-    - title:  "Referenzen"
+        - title: 'Übersicht'
+          url: '/expertise'
+        - title: 'Tracking'
+          url: '/tracking'
+        - title: 'Webanalyse'
+          url: '/webanalyse'
+    - title:  'Referenzen'
       url: '/referenzen'
     - title: 'Team'
       url: '/team'
@@ -108,7 +108,7 @@ font_settings:
     line_height: 1.2
   h2:
     small_size: 22
-    medium_size: 30
+    medium_size: 28
     large_size: 35
     weight: 700
     letter_spacing: -0.02
@@ -142,8 +142,8 @@ font_settings:
     letter_spacing: 0
     line_height: 1.6
   p:
-    small_size: 18
-    medium_size: 20
+    small_size: 16
+    medium_size: 18
     large_size: 22
     weight: 400
     letter_spacing: 0
