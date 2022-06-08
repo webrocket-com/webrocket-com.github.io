@@ -7,6 +7,8 @@ featured_image: /images/demo/contact.jpg
 
 {% include contact-form.html %}
 
+---
+
 <div class="custom-row">
   <div class="custom-col no-margin">
   <h3>Webrocket GmbH</h3>

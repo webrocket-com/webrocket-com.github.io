@@ -7,7 +7,7 @@ featured_image: images/demo/referenz.jpg
 
 <div class="custom-row">
   <div class="custom-col">
-    <img src="/images/partner/Illu_XXXLutz-350x350.png" style="width: 300px; margin: auto;" />
+    <img src="/images/partner/Illu_XXXLutz-350x350.png" style="width: 300px; margin: auto;" alt="XXXLutz" />
   </div>
   <div class="custom-col">
     <h2>XXXLUTZ-GRUPPE</h2>
@@ -23,7 +23,7 @@ featured_image: images/demo/referenz.jpg
     <p>Webrocket betreut den Kunden aus dem Bereich Sporteinzelhandel unter anderem bei der Interpretation der Daten sowie bei dem technischen Einbau der Webanalyse. Zusätzlich verwaltet Webrocket die gesamten Pixel, die Hervis weltweit verwendet.</p>
   </div>
   <div class="custom-col">
-    <img src="/images/partner/Illu_Hervis-350x350.png" style="width: 300px; margin: auto;" />
+    <img src="/images/partner/Illu_Hervis-350x350.png" style="width: 300px; margin: auto;" alt="Hervis" />
   </div>
 </div>
 
@@ -31,7 +31,7 @@ featured_image: images/demo/referenz.jpg
 
 <div class="custom-row">
   <div class="custom-col">
-    <img src="/images/partner/Illu_VW-Group-350x350.png" style="width: 300px; margin: auto;" />
+    <img src="/images/partner/Illu_VW-Group-350x350.png" style="width: 300px; margin: auto;" alt="Volkswagen Group Services" />
   </div>
   <div class="custom-col">
     <h2>VOLKSWAGEN GROUP SERVICES</h2>
@@ -47,7 +47,7 @@ featured_image: images/demo/referenz.jpg
     <p>Greenpeace ist die größte gemeinnützige Organisation, die von Webrocket tatkräftig unterstützt wird. Durch die Erstellung eines generellen Datenkonzepts kann sichergestellt werden, dass Spenden an die Naturschutzorganisation auch dort ankommen, wo sie gebraucht werden.</p>
   </div>
   <div class="custom-col">
-    <img src="/images/partner/Illu_Greenpeace-350x350.png" style="width: 300px; margin: auto;" />
+    <img src="/images/partner/Illu_Greenpeace-350x350.png" style="width: 300px; margin: auto;" alt="Greenpeace" />
   </div>
 </div>
 
@@ -58,28 +58,28 @@ featured_image: images/demo/referenz.jpg
 <div class="slider-referenzen" style="margin-top: 2.5em;">
 	<div class="slide-track">
 		<div class="slide">
-			<img src="/images/referenzen/moebelix.png" alt="" />
+			<img src="/images/referenzen/moebelix.png" alt="moebelix" />
 		</div>
 		<div class="slide">
-			<img src="/images/referenzen/moemax.jpg" alt="" />
+			<img src="/images/referenzen/moemax.jpg" alt="moemax" />
 		</div>
 		<div class="slide">
-			<img src="/images/referenzen/poco.png" alt="" />
+			<img src="/images/referenzen/poco.png" alt="poco" />
 		</div>
 		<div class="slide">
-			<img src="/images/referenzen/xxxlutz.jpg" alt="" />
+			<img src="/images/referenzen/xxxlutz.jpg" alt="xxxlutz" />
 		</div>
 		<div class="slide">
-			<img src="/images/referenzen/springlane.png" alt="" />
+			<img src="/images/referenzen/springlane.png" alt="springlane" />
 		</div>
 		<div class="slide no-margin">
-			<img src="/images/referenzen/rauch.png" alt="" />
+			<img src="/images/referenzen/rauch.png" alt="rauch" />
 		</div>
 		<div class="slide no-margin">
-			<img src="/images/referenzen/petfoodexpress.png" alt="" />
+			<img src="/images/referenzen/petfoodexpress.png" alt="petfoodexpress" />
 		</div>
 		<div class="slide">
-			<img src="/images/referenzen/unioninvestment.png" alt="" />
+			<img src="/images/referenzen/unioninvestment.png" alt="unioninvestment" />
 		</div>
 	</div>
 </div>

@@ -39,38 +39,38 @@ featured_image: images/demo/expertise.jpg
 
 <div class="slider-expertise" style="margin-top: 2.5em;">
   <div class="slide-track">
-    <div class="slide"><img src="/images/tracker/jentis.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/ga4.svg" alt="" style="height: 70px;" /></div>
-    <div class="slide"><img src="/images/tracker/optimize.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/facebook.svg" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/snowplow.webp" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/trbo.svg" alt="" style="height: 50px;" /></div>
-    <div class="slide"><img src="/images/tracker/adform.png" alt="" style="width: 200px;" /></div>
-    <div class="slide"><img src="/images/tracker/ads.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/affilinet.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/connects.png"  alt="" /></div>
-    <div class="slide"><img src="/images/tracker/crimtan.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/criteo.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/dognet.png" alt="" style="max-width: 150px;" /></div>
-    <div class="slide"><img src="/images/tracker/easymarketing.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/emarsys.png"  alt="" /></div>
-    <!-- <div class="slide"><img src="/images/tracker/glami.png" alt="" /></div> -->
-    <div class="slide"><img src="/images/tracker/hotjar.png" alt="" style="max-width: 150px;" /></div>
-    <div class="slide"><img src="/images/tracker/iAdvize.jpg"  alt="" /></div>
-    <div class="slide"><img src="/images/tracker/intelliAd.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/ladenzeile.jpg" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/linkedin.png"  alt="" style="max-width: 160px;" /></div>
-    <div class="slide"><img src="/images/tracker/matomo.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/moebel-de.png" alt="" style="max-width: 150px;" /></div>
-    <div class="slide"><img src="/images/tracker/mouseflow.png"  alt="" /></div>
-    <div class="slide"><img src="/images/tracker/optimize.png" alt="" /></div>
-    <div class="slide"><img src="/images/tracker/partnerize.png" alt="" style="max-width: 150px;" /></div>
-    <div class="slide"><img src="/images/tracker/peerius.png"  alt="" /></div>
-    <div class="slide"><img src="/images/tracker/pinterest.png" alt="" style="max-width: 100px;" /></div>
-    <div class="slide"><img src="/images/tracker/sklik.png" alt="" style="max-width: 170px;" /></div>
-    <div class="slide"><img src="/images/tracker/snapchat.png"  alt="" /></div>
-    <div class="slide"><img src="/images/tracker/taboola.png" alt="" style="max-width: 150px;" /></div>
-    <div class="slide"><img src="/images/tracker/teads.png" alt="" style="max-width: 140px;" /></div>
-    <div class="slide"><img src="/images/tracker/tiktok.png" alt=""  style="max-width: 160px;" /></div>
+    <div class="slide"><img src="/images/tracker/jentis.png" alt="jentis" /></div>
+    <div class="slide"><img src="/images/tracker/ga4.svg" alt="ga4" style="height: 70px;" /></div>
+    <div class="slide"><img src="/images/tracker/optimize.png" alt="optimize" /></div>
+    <div class="slide"><img src="/images/tracker/facebook.svg" alt="facebook" /></div>
+    <div class="slide"><img src="/images/tracker/snowplow.webp" alt="snowplow" /></div>
+    <div class="slide"><img src="/images/tracker/trbo.svg" alt="trbo" style="height: 50px;" /></div>
+    <div class="slide"><img src="/images/tracker/adform.png" alt="adform" style="width: 200px;" /></div>
+    <div class="slide"><img src="/images/tracker/ads.png" alt="ads" /></div>
+    <div class="slide"><img src="/images/tracker/affilinet.png" alt="affilinet" /></div>
+    <div class="slide"><img src="/images/tracker/connects.png"  alt="connects" /></div>
+    <div class="slide"><img src="/images/tracker/crimtan.png" alt="crimtan" /></div>
+    <div class="slide"><img src="/images/tracker/criteo.png" alt="criteo" /></div>
+    <div class="slide"><img src="/images/tracker/dognet.png" alt="dognet" style="max-width: 150px;" /></div>
+    <div class="slide"><img src="/images/tracker/easymarketing.png" alt="easymarketing" /></div>
+    <div class="slide"><img src="/images/tracker/emarsys.png"  alt="emarsys" /></div>
+    <!-- <div class="slide"><img src="/images/tracker/glami.png" alt="glami" /></div> -->
+    <div class="slide"><img src="/images/tracker/hotjar.png" alt="hotjar" style="max-width: 150px;" /></div>
+    <div class="slide"><img src="/images/tracker/iAdvize.jpg"  alt="iAdvize" /></div>
+    <div class="slide"><img src="/images/tracker/intelliAd.png" alt="intelliAd" /></div>
+    <div class="slide"><img src="/images/tracker/ladenzeile.jpg" alt="ladenzeile" /></div>
+    <div class="slide"><img src="/images/tracker/linkedin.png"  alt="linkedin" style="max-width: 160px;" /></div>
+    <div class="slide"><img src="/images/tracker/matomo.png" alt="matomo" /></div>
+    <div class="slide"><img src="/images/tracker/moebel-de.png" alt="moebel-de" style="max-width: 150px;" /></div>
+    <div class="slide"><img src="/images/tracker/mouseflow.png"  alt="mouseflow" /></div>
+    <div class="slide"><img src="/images/tracker/optimize.png" alt="optimize" /></div>
+    <div class="slide"><img src="/images/tracker/partnerize.png" alt="partnerize" style="max-width: 150px;" /></div>
+    <div class="slide"><img src="/images/tracker/peerius.png"  alt="peerius" /></div>
+    <div class="slide"><img src="/images/tracker/pinterest.png" alt="pinterest" style="max-width: 100px;" /></div>
+    <div class="slide"><img src="/images/tracker/sklik.png" alt="sklik" style="max-width: 170px;" /></div>
+    <div class="slide"><img src="/images/tracker/snapchat.png"  alt="snapchat" /></div>
+    <div class="slide"><img src="/images/tracker/taboola.png" alt="taboola" style="max-width: 150px;" /></div>
+    <div class="slide"><img src="/images/tracker/teads.png" alt="teads" style="max-width: 140px;" /></div>
+    <div class="slide"><img src="/images/tracker/tiktok.png" alt="tiktok" style="max-width: 160px;" /></div>
   </div>
 </div>

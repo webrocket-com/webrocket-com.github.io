@@ -10,7 +10,7 @@ featured_image: /images/demo/job.jpg
 <div class="custom-cards">
   <article class="custom-card">
       <figure class="custom-card-thumb">
-        <img src="images/jobs/Illu_faireBezahlung-150x150.png" />
+        <img src="images/jobs/Illu_faireBezahlung-150x150.png" alt="Faire Bezahlung" />
       </figure>
       <div class="custom-card-content">
         <h3 class="custom-card-title">Faire Bezahlung</h3>
@@ -19,7 +19,7 @@ featured_image: /images/demo/job.jpg
   </article>
   <article class="custom-card">
     <figure class="custom-card-thumb">
-      <img src="images/jobs/Illu_AllIn-150x150.png" />
+      <img src="images/jobs/Illu_AllIn-150x150.png" alt="Kein All-in Vertrag" />
     </figure>
     <div class="custom-card-content">
       <h3 class="custom-card-title">Kein All-in Vertrag</h3>
@@ -28,7 +28,7 @@ featured_image: /images/demo/job.jpg
   </article>
   <article class="custom-card">
     <figure class="custom-card-thumb">
-      <img src="images/jobs/Illu_Gleitzeit_HomeOffice-150x150.png" />
+      <img src="images/jobs/Illu_Gleitzeit_HomeOffice-150x150.png" alt="Gleitzeit und Homeoffice" />
     </figure>
     <div class="custom-card-content">
       <h3 class="custom-card-title">Gleitzeit und Homeoffice</h3>
@@ -39,7 +39,7 @@ featured_image: /images/demo/job.jpg
 <div class="custom-cards">
   <article class="custom-card">
       <figure class="custom-card-thumb">
-        <img src="images/team/Illu_Weiterbildung_CaseConflict-150x150.png" />
+        <img src="images/team/Illu_Weiterbildung_CaseConflict-150x150.png" alt="Weiterbildungen" />
       </figure>
       <div class="custom-card-content">
         <h3 class="custom-card-title">Weiterbildungen</h3>
@@ -48,7 +48,7 @@ featured_image: /images/demo/job.jpg
   </article>
   <article class="custom-card">
     <figure class="custom-card-thumb">
-      <img src="images/team/Illu_diplomepraktikaect-150x150.png" />
+      <img src="images/team/Illu_diplomepraktikaect-150x150.png" alt="Diplomarbeiten und interne Projekte" />
     </figure>
     <div class="custom-card-content">
       <h3 class="custom-card-title">Diplomarbeiten und interne Projekte</h3>
@@ -57,7 +57,7 @@ featured_image: /images/demo/job.jpg
   </article>
   <article class="custom-card">
     <figure class="custom-card-thumb">
-      <img src="images/jobs/Illu_Hundefreundlichkeit-150x150.png" />
+      <img src="images/jobs/Illu_Hundefreundlichkeit-150x150.png" alt="Hunde sind herzlich willkommen" />
     </figure>
     <div class="custom-card-content">
       <h3 class="custom-card-title">Hunde sind herzlich willkommen</h3>
