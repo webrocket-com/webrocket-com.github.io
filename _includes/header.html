@@ -57,8 +57,8 @@
 
 				const isDropdownPage = (page) => dropdownPages.includes(page);
 
-				const toggleDropdown = () => {
-					if (isDropdownPage(currentPage) && window.innerWidth < 1024) {
+				const toggleDropdown = (page) => {
+					if ((isDropdownPage(page) || page === null) && window.innerWidth < 1024) {
 						if (
 							!dropdownWrap.classList.contains('open') &&
 							!dropdownMenu.classList.contains('active')
@@ -75,7 +75,7 @@
 				const toggleActive = (page) => {
 					if (isDropdownPage(page)) {
 						dropdownToggle.classList.add('dropdown-active');
-						if (page === currentPage) toggleDropdown();
+						if (page === currentPage) toggleDropdown(page);
 					} else {
 						dropdownToggle.classList.remove('dropdown-active');
 					}
@@ -88,7 +88,10 @@
 					});
 				});
 
-				dropdownToggle.addEventListener('click', toggleDropdown);
+				dropdownToggle.addEventListener('click', (e) => {
+					const page = e.target.getAttribute('href');
+					toggleDropdown(page);
+				});
 
 				window.addEventListener('resize', () => {
 					if (window.innerWidth > 1024) {
