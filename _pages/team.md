@@ -41,7 +41,7 @@ featured_image: images/demo/team2.jpg
 <div class="custom-cards">
   <article class="custom-card">
       <figure class="custom-card-thumb">
-        <img src="images/team/Illu_Weiterbildung_Helenes-MacBook-Pro.local_Aug-21-084201-2018_CaseConflict-150x150.png" />
+        <img src="images/team/Illu_Weiterbildung_CaseConflict-150x150.png" />
       </figure>
       <div class="custom-card-content">
         <h3 class="custom-card-title">Weiterbildungen</h3>
@@ -50,7 +50,7 @@ featured_image: images/demo/team2.jpg
   </article>
   <article class="custom-card">
     <figure class="custom-card-thumb">
-      <img src="images/team/Illu_DiplomePraktikaect-150x150.png" />
+      <img src="images/team/Illu_diplomepraktikaect-150x150.png" />
     </figure>
     <div class="custom-card-content">
       <h3 class="custom-card-title">Diplomarbeiten und interne Projekte</h3>
