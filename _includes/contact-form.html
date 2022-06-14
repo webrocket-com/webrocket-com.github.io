@@ -24,19 +24,11 @@
 		</div>
 		<input type="hidden" name="_next" value="{{ site.data.settings.contact_settings.confirmation_url }}" />
 		<input type="text" name="_gotcha" style="display: none;" class="contact-form__gotcha" val="">
-		<script>
-			const captcha_done = () => {
-				document.getElementById('submit-btn').removeAttribute('disabled');
-				document.getElementById('submit-btn').classList.remove('not-allowed');
-			};
-		</script>
-		<div class="g-recaptcha" data-callback="captcha_done" data-sitekey="6LdVU20gAAAAALJaGMSKmyWjP4csUHTRgyJawHLl"></div>
+		<div class="g-recaptcha" data-sitekey="6LdVU20gAAAAALJaGMSKmyWjP4csUHTRgyJawHLl"></div>
 		<div class="contact-form__item">
-			<input id="submit-btn" type="submit" value="{{ site.data.settings.contact_settings.send_button_text }}" class="button button--large not-allowed" disabled="disabled">
+			<input id="submit-btn" type="submit" value="{{ site.data.settings.contact_settings.send_button_text }}" class="button button--large">
 		</div>
-		<div id="form-status" class="alert hide">
-			This is an alert box.
-		  </div>
+		<div id="form-status" class="alert hide"></div>
 	</form>
 
 	<script>
