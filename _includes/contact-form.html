@@ -32,22 +32,59 @@
 		<input type="hidden" name="_next" value="{{ site.data.settings.contact_settings.confirmation_url }}" />
 		<input type="text" name="_gotcha" style="display: none;" class="contact-form__gotcha" val="">
 
-		<div class="g-recaptcha" data-sitekey="6LdVU20gAAAAALJaGMSKmyWjP4csUHTRgyJawHLl"></div>
+		<div class="g-recaptcha" data-callback="captcha_done" data-sitekey="6LdVU20gAAAAALJaGMSKmyWjP4csUHTRgyJawHLl"></div>
 
 		<div class="contact-form__item">
-			<input type="submit" value="{{ site.data.settings.contact_settings.send_button_text }}" class="button button--large">
+			<input id="submit-btn" type="submit" value="{{ site.data.settings.contact_settings.send_button_text }}" class="button button--large not-allowed" disabled="disabled">
 		</div>
 
 		<div id="form-status"></div>
 	</form>
 
 	<script>
-		window.onload = function() { 
-			var el = document.getElementById('g-recaptcha-response'); 
-			if (el) { 
-				el.setAttribute('required', 'required'); 
-			} 
+		window.onload = () => {
+			var el = document.getElementById('g-recaptcha-response');
+			if (el) el.setAttribute('required', 'required');
 		}
+
+		const captcha_done = () => {
+			document.getElementById('submit-btn').removeAttribute('disabled');
+			document.getElementById('submit-btn').classList.remove('not-allowed');
+		};
+
+		var form = document.getElementById("contact-form");
+
+		async function handleSubmit(event) {
+			event.preventDefault();
+
+			var status = document.getElementById("form-status");
+			var data = new FormData(event.target);
+
+			fetch(event.target.action, {
+				method: form.method,
+				body: data,
+				headers: {
+					'Accept': 'application/json'
+				}
+			}).then(response => {
+				if (response.ok) {
+					status.innerHTML = "Danke für deine Nachricht!";
+					form.reset();
+				} else {
+					response.json().then(data => {
+						if (Object.hasOwn(data, 'errors')) {
+							status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+						} else {
+							status.innerHTML = "Hoppla! Beim Senden des Formulars ist ein Problem aufgetreten.";
+						}
+					});
+				}
+			}).catch(error => {
+				status.innerHTML = "Hoppla! Beim Senden des Formulars ist ein Problem aufgetreten.";
+			});
+		}
+
+		form.addEventListener("submit", handleSubmit);
 	</script>
 
 </div>
