@@ -30,13 +30,24 @@
 		</div>
 
 		<input type="hidden" name="_next" value="{{ site.data.settings.contact_settings.confirmation_url }}" />
-		<!-- <input type="hidden" name="_subject" value="{{ site.data.settings.contact_settings.email_subject }}" /> -->
 		<input type="text" name="_gotcha" style="display: none;" class="contact-form__gotcha" val="">
+
+		<div class="g-recaptcha" data-sitekey="6LdVU20gAAAAALJaGMSKmyWjP4csUHTRgyJawHLl"></div>
 
 		<div class="contact-form__item">
 			<input type="submit" value="{{ site.data.settings.contact_settings.send_button_text }}" class="button button--large">
 		</div>
 
+		<div id="form-status"></div>
 	</form>
+
+	<script>
+		window.onload = function() { 
+			var el = document.getElementById('g-recaptcha-response'); 
+			if (el) { 
+				el.setAttribute('required', 'required'); 
+			} 
+		}
+	</script>
 
 </div>
