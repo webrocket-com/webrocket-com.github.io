@@ -21,7 +21,7 @@ featured_image: images/demo/team2.jpg
           <div class="profile-desc">
               <h2>Cihan</h2>
               <p>CEO</p>
-              <p><a href="https://linkedin.com/in/cihan-avsar-8620547a" target="_blank"><img src="/images/team/linkedin.svg" alt="LinkedIn" /></a></p>
+              <!-- <p><a href="https://linkedin.com/in/cihan-avsar-8620547a" target="_blank"><img src="/images/team/linkedin.svg" alt="LinkedIn" /></a></p> -->
           </div>
         </div>
       </div>
@@ -32,8 +32,8 @@ featured_image: images/demo/team2.jpg
           </div>
           <div class="profile-desc">
               <h2>Chris</h2>
-              <p>CTO</p>
-              <p><a href="https://linkedin.com/in/christof-staggl-3064a9241" target="_blank"><img src="/images/team/linkedin.svg" alt="LinkedIn" /></a></p>
+              <p>Developer<br/>Consultant</p>
+              <!-- <p><a href="https://linkedin.com/in/christof-staggl-3064a9241" target="_blank"><img src="/images/team/linkedin.svg" alt="LinkedIn" /></a></p> -->
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ featured_image: images/demo/team2.jpg
             <div class="profile-desc">
                 <h2>Sven</h2>
                 <p>Developer</p>
-                <p><a href="https://linkedin.com/in/m00nbyte" target="_blank"><img src="/images/team/linkedin.svg" alt="LinkedIn" /></a></p>
+                <!-- <p><a href="https://linkedin.com/in/m00nbyte" target="_blank"><img src="/images/team/linkedin.svg" alt="LinkedIn" /></a></p> -->
             </div>
         </div>
       </div>

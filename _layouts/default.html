@@ -35,36 +35,39 @@
 	<meta property="og:image" content="{{ page.featured_image | absolute_url }}" />
 
 	{% if site.data.settings.font_settings.font_embed %}
-	<!-- Font Embed Code -->
-	{{ site.data.settings.font_settings.font_embed }}
+        <!-- Font Embed Code -->
+        {{ site.data.settings.font_settings.font_embed }}
 	{% endif %}
 
 	<!-- Styles -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
 	
-	
 	<!-- Icons -->
 	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
 
+    <!-- Cookie Consent -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.6/dist/cookieconsent.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.6/dist/cookieconsent.js"></script> -->
+
 	<!-- Recaptcha -->
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 	{% if site.data.settings.advanced_settings.custom_styles %}
-	<!-- Custom Styles -->
-	<style>{{ site.data.settings.advanced_settings.custom_styles }}</style>
+        <!-- Custom Styles -->
+        <style>{{ site.data.settings.advanced_settings.custom_styles }}</style>
 	{% endif %}
 
 	{% if site.data.settings.advanced_settings.analytics_code %}
-	<!-- Analytics Code -->
-	{{ site.data.settings.advanced_settings.analytics_code }}
+        <!-- Analytics Code -->
+        {{ site.data.settings.advanced_settings.analytics_code }}
 	{% endif %}
 
 	{% if site.data.settings.advanced_settings.header_js %}
-	<!-- Extra Header JS Code -->
-	{{ site.data.settings.advanced_settings.header_js }}
+        <!-- Extra Header JS Code -->
+        {{ site.data.settings.advanced_settings.header_js }}
 	{% endif %}
 	
 </head>
@@ -100,9 +103,154 @@
 	<script src="{{ '/js/plugins-min.js' | relative_url }}"></script>
 	<script src="{{ '/js/personal-min.js' | relative_url }}"></script>
 
+    <!-- Cookie Consent -->
+    <!-- <script>
+        window.addEventListener('load', function() {
+            var cc = initCookieConsent();
+
+            cc.run({
+                current_lang: 'de',
+                autoclear_cookies: true,                   // default: false
+                page_scripts: true,                        // default: false
+
+                // mode: 'opt-in'                          // default: 'opt-in'; value: 'opt-in' or 'opt-out'
+                // delay: 0,                               // default: 0
+                // auto_language: '',                      // default: null; could also be 'browser' or 'document'
+                // autorun: true,                          // default: true
+                force_consent: true,                   // default: false
+                // hide_from_bots: false,                  // default: false
+                // remove_cookie_tables: false             // default: false
+                // cookie_name: 'cc_cookie',               // default: 'cc_cookie'
+                // cookie_expiration: 182,                 // default: 182 (days)
+                // cookie_necessary_only_expiration: 182   // default: disabled
+                // cookie_domain: location.hostname,       // default: current domain
+                // cookie_path: '/',                       // default: root
+                // cookie_same_site: 'Lax',                // default: 'Lax'
+                // use_rfc_cookie: false,                  // default: false
+                // revision: 0,                            // default: 0
+
+                onFirstAction: function(user_preferences, cookie){
+                    // callback triggered only once on the first accept/reject action
+                },
+
+                onAccept: function (cookie) {
+                    // callback triggered on the first accept/reject action, and after each page load
+                },
+
+                onChange: function (cookie, changed_categories) {
+                    // callback triggered when user changes preferences after consent has already been given
+                },
+                gui_options: {
+                    consent_modal: {
+                        layout: 'box',               // box/cloud/bar
+                        position: 'middle center',     // bottom/middle/top + left/right/center
+                        transition: 'zoom',           // zoom/slide
+                        swap_buttons: false            // enable to invert buttons
+                    },
+                    settings_modal: {
+                        layout: 'box',                 // box/bar
+                        // position: 'left',           // left/right
+                        transition: 'slide'            // zoom/slide
+                    }
+                },
+                languages: {
+                    'de': {
+                        consent_modal: {
+                            title: '🍪 Wir verwenden Cookies!',
+                            description: 'Hallo, diese Website verwendet essentielle Cookies, um ihren ordnungsgemäßen Betrieb zu gewährleisten, und Tracking-Cookies, um zu verstehen, wie Sie damit interagieren. Letztere werden erst nach Zustimmung gesetzt. <button type="button" data-cc="c-settings" class="cc-link">Einstellungen verwalten</button>',
+                            primary_btn: {
+                                text: 'Alle akzeptieren',
+                                role: 'accept_all'              // 'accept_selected' or 'accept_all'
+                            },
+                            secondary_btn: {
+                                text: 'Alle ablehnen',
+                                role: 'accept_necessary'        // 'settings' or 'accept_necessary'
+                            }
+                        },
+                        settings_modal: {
+                            title: 'Cookie Einstellungen',
+                            save_settings_btn: 'Einstellungen speichern',
+                            accept_all_btn: 'Alle akzeptieren',
+                            reject_all_btn: 'Alle ablehnen',
+                            close_btn_label: 'Schließen',
+                            cookie_table_headers: [
+                                {col1: 'Name'},
+                                {col2: 'Erhobene Daten'},
+                                {col3: 'Aufbewahrungsdauer'}
+                            ],
+                            blocks: [
+                                {
+                                    title: 'Cookie Nutzung 📢',
+                                    description: 'Diese Webseite verwendet Cookies, um die grundlegenden Funktionen sicherzustellen, und Ihr Online-Erlebnis zu verbessern. Sie können die Statistik Cookies jederzeit akzeptieren oder ablehnen. Weitere Einzelheiten zu Cookies und anderen sensiblen Daten finden Sie in der vollständigen Datenschutzerklärung.'
+                                }, {
+                                    title: 'Erforderliche Cookies',
+                                    description: 'Diese Cookies sind für das reibungslose Funktionieren der Webseite unerlässlich. Ohne diese Cookies würde die Webseite nicht richtig funktionieren.',
+                                    toggle: {
+                                        value: 'necessary',
+                                        enabled: true,
+                                        readonly: true
+                                    },
+                                    cookie_table: [
+                                        {
+                                            col1: 'Google Fonts',
+                                            col2: 'IP-Adresse',
+                                            col3: '1 Jahr'
+                                        }, {
+                                            col1: 'Matomo (self hosted)',
+                                            col2: 'IP-Adresse',
+                                            col3: '1 Jahr'
+                                        }, {
+                                            col1: 'Jentis',
+                                            col2: 'IP-Adresse',
+                                            col3: '1 Jahr'
+                                        }
+                                    ]
+                                }, /*{
+                                    title: 'Statistik Cookies',
+                                    description: 'Diese Cookies helfen zu verstehen, wie Besucher mit der Webseite interagieren, indem Informationen anonym gesammelt und gesendet werden.',
+                                    toggle: {
+                                        value: 'analytics',
+                                        enabled: false,
+                                        readonly: false
+                                    },
+                                    cookie_table: [
+                                        {
+                                            col1: '^_ga',
+                                            col2: 'google.com',
+                                            col3: '2 years',
+                                            col4: 'description ...',
+                                            is_regex: true
+                                        },
+                                        {
+                                            col1: '_gid',
+                                            col2: 'google.com',
+                                            col3: '1 day',
+                                            col4: 'description ...',
+                                        }
+                                    ]
+                                }, {
+                                    title: 'Advertisement and Targeting cookies',
+                                    description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
+                                    toggle: {
+                                        value: 'targeting',
+                                        enabled: false,
+                                        readonly: false
+                                    }
+                                }, {
+                                    title: 'Mehr Informationen',
+                                    description: 'Bei Fragen zu unserer Richtlinie zu Cookies und Ihren Auswahlmöglichkeiten wenden Sie sich bitte an uns.',
+                                }*/
+                            ]
+                        }
+                    }
+                }
+            });
+        });
+    </script> -->
+
 	{% if site.data.settings.advanced_settings.footer_js %}
-	<!-- Extra Footer JS Code -->
-	{{ site.data.settings.advanced_settings.footer_js }}
+        <!-- Extra Footer JS Code -->
+        {{ site.data.settings.advanced_settings.footer_js }}
 	{% endif %}
 
 	</body>

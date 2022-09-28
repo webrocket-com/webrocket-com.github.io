@@ -5,7 +5,7 @@ description: Die Zeiten, in denen man für sein Tracking unzählige Ansprechpart
 featured_image: images/demo/expertise.jpg
 ---
 
-## Vermittler im Spannungsfeld zwischen Markting & IT
+## Vermittler im Spannungsfeld zwischen Marketing & IT
 
 <p style="text-align: justify;">Aus Erfahrung wissen wir, dass gerade zwischen der Technik- und der Analyseabteilung immer wieder Kommunikationsprobleme auftreten können. Hier kann Webrocket helfen, denn wir sprechen die Sprache des Marketings und der IT. Unsere Experten nehmen sich Zeit, auftretende Fragen der Techniker bezüglich des Trackings zu beantworten und das Datenverständnis der IT-Abteilungen zu steigern. Parallel dazu werden zusammen mit dem Marketing Möglichkeiten erarbeitet, die technisch umgesetzt werden können.</p>
 
