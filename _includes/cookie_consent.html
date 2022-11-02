@@ -1,9 +1,42 @@
  <!-- Cookie Consent -->
  <script>
-    window.addEventListener('load', function() {
-        var cc = initCookieConsent();
+    const updateVendors = (categories) => {
+        if (window?.jentis?.consent?.engine?.setNewVendorConsents) {
 
-        cc.run({
+            let consentMap = {
+                jentis: true,
+                matomo: true,
+                googleanalytics: false,
+                adobeanalytics: false
+            };
+
+            if (categories.indexOf('necessary') !== -1) {
+                consentMap.jentis = true;
+                consentMap.matomo = true;
+            }
+
+            if (categories.indexOf('analytics') !== -1) {
+                consentMap.googleanalytics = true;
+                consentMap.adobeanalytics = true;
+            }
+
+            window.jentis.consent.engine.setNewVendorConsents(consentMap);
+        }
+    };
+
+    const userConsentId = () => {
+        if (window?.jentis?.consent?.engine?.getConsentId) {
+            return window.jentis.consent.engine.getConsentId();
+
+        }
+
+        return '00000';
+    };
+
+    window.addEventListener('load', function() {
+        window.cc = initCookieConsent();
+
+        window.cc.run({
             current_lang: 'de',
             autoclear_cookies: true,                   // default: false
             page_scripts: true,                        // default: false
@@ -26,21 +59,17 @@
 
             onFirstAction: function(user_preferences, cookie){
                 // callback triggered only once on the first accept/reject action
-                debugger;
-                console.log(cookie);
+                updateVendors(cookie.categories);
             },
 
             onAccept: function (cookie) {
                 // callback triggered on the first accept/reject action, and after each page load
-                debugger;
-                console.log(cookie);
+                updateVendors(cookie.categories);
             },
 
             onChange: function (cookie, changed_categories) {
-                debugger;
-                console.log(cookie);
-                console.log(changed_categories);
                 // callback triggered when user changes preferences after consent has already been given
+                updateVendors(cookie.categories);
             },
             gui_options: {
                 consent_modal: {
@@ -77,8 +106,8 @@
                         close_btn_label: 'Schließen',
                         cookie_table_headers: [
                             {col1: 'Name'},
-                            {col2: 'Erhobene Daten'},
-                            {col3: 'Aufbewahrungsdauer'}
+                            // {col2: 'Erhobene Daten'},
+                            {col2: 'Aufbewahrungsdauer'}
                         ],
                         blocks: [
                             {
@@ -95,16 +124,16 @@
                                 cookie_table: [
                                     {
                                         col1: 'Google Fonts',
-                                        col2: 'IP-Adresse',
-                                        col3: '1 Jahr'
+                                        // col2: 'IP-Adresse',
+                                        col2: '1 Jahr'
                                     }, {
                                         col1: 'Matomo (self hosted)',
-                                        col2: 'IP-Adresse',
-                                        col3: '1 Jahr'
+                                        // col2: 'IP-Adresse',
+                                        col2: '1 Jahr'
                                     }, {
                                         col1: 'Jentis',
-                                        col2: 'IP-Adresse',
-                                        col3: '1 Jahr'
+                                        // col2: 'IP-Adresse',
+                                        col2: '1 Jahr'
                                     }
                                 ]
                             }, {
@@ -117,17 +146,21 @@
                                 },
                                 cookie_table: [
                                     {
-                                        col1: '_ga',
-                                        col2: 'google.com',
-                                        col3: '2 years',
-                                        col4: 'description ...',
+                                        col1: 'Google Analytics',
+                                        // col2: 'google.com',
+                                        col2: '1 Jahr',
+                                        is_regex: true
+                                    },
+                                    {
+                                        col1: 'Adobe Analytics',
+                                        // col2: 'google.com',
+                                        col2: '1 Jahr',
                                         is_regex: true
                                     }/*,
                                     {
                                         col1: '_gid',
-                                        col2: 'google.com',
-                                        col3: '1 day',
-                                        col4: 'description ...',
+                                        // col2: 'google.com',
+                                        col2: '1 day',
                                     }*/
                                 ]
                             }/*, {
@@ -140,7 +173,7 @@
                                 }
                             }*/, {
                                 title: 'Mehr Informationen',
-                                description: 'Bei Fragen zu unserer Richtlinie zu Cookies und Ihren Auswahlmöglichkeiten wenden Sie sich bitte an uns.',
+                                description: 'Bei Fragen zu unserer Richtlinie zu Cookies und Ihren Auswahlmöglichkeiten wenden Sie sich bitte an uns.<br /><br />Ihre Consent-ID: ' + userConsentId(),
                             }
                         ]
                     }
