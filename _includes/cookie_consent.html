@@ -7,7 +7,7 @@
                 jentis: true,
                 matomo: true,
                 googleanalytics: false,
-                adobeanalytics: false
+                googleads: false
             };
 
             if (categories.indexOf('necessary') !== -1) {
@@ -17,7 +17,7 @@
 
             if (categories.indexOf('analytics') !== -1) {
                 consentMap.googleanalytics = true;
-                consentMap.adobeanalytics = true;
+                consentMap.googleads = true;
             }
 
             window.jentis.consent.engine.setNewVendorConsents(consentMap);
@@ -152,7 +152,7 @@
                                         is_regex: true
                                     },
                                     {
-                                        col1: 'Adobe Analytics',
+                                        col1: 'Google Ads',
                                         // col2: 'google.com',
                                         col2: '1 Jahr',
                                         is_regex: true
